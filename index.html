@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L.O.S NFT</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="./js/app.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="row-con">
+        <div class="col-2-l">
+          <div class="img-scroller-con">
+            <div class="img-scroller">
+              <div class="scroll-img scroll-img1"></div>
+              <div class="scroll-img scroll-img2"></div>
+              <div class="scroll-img scroll-img3"></div>
+              <div class="scroll-img scroll-img1"></div>
+              <div class="scroll-img scroll-img2"></div>
+              <div class="scroll-img scroll-img3"></div>
+              <button
+                class="scroll-indicator scroll-indicator-left"
+                id="scroll-indicator-left"
+              >
+                &lt;
+              </button>
+
+              <button
+                class="scroll-indicator scroll-indicator-right"
+                id="scroll-indicator-right"
+              >
+                &gt;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-2-l">
+          <div class="nft-con">
+            <div class="btn-wrapper">
+              <button class="owned-btn btn">Owned</button>
+              <button class="staked-btn btn">Staked</button>
+              <button class="connect-btn btn" id="modal-open">Connect</button>
+            </div>
+
+            <div class="owned-outer-con outer-con active-con">
+              <div class="owned-con">
+                <div class="owned-img-card-con">
+                  <div class="owned-img-card">
+                    <img class="owned-img" src="./images/nft1.png" alt="" />
+                    <br />
+                    <h5 class="owned-img-title">Swaggy Tiger</h5>
+                    <button class="owned-stake-btn btn-s">Stake</button>
+                  </div>
+                </div>
+
+                <div class="owned-img-card-con">
+                  <div class="owned-img-card">
+                    <img class="owned-img" src="./images/nft2.png" alt="" />
+                    <br />
+                    <h5 class="owned-img-title">City Monkey</h5>
+                    <button class="owned-stake-btn btn-s">Stake</button>
+                  </div>
+                </div>
+
+                <div class="owned-img-card-con">
+                  <div class="owned-img-card">
+                    <img class="owned-img" src="./images/nft3.jpeg" alt="" />
+                    <br />
+                    <h5 class="owned-img-title">Moody Monkey</h5>
+                    <button class="owned-stake-btn btn-s">Stake</button>
+                  </div>
+                </div>
+                <div class="owned-img-card-con">
+                  <div class="owned-img-card">
+                    <img class="owned-img" src="./images/nft4.jpeg" alt="" />
+                    <br />
+                    <h5 class="owned-img-title">King Cat</h5>
+                    <button class="owned-stake-btn btn-s">Stake</button>
+                  </div>
+                </div>
+
+                <div class="owned-img-card-con">
+                  <div class="owned-img-card">
+                    <img class="owned-img" src="./images/nft1.png" alt="" />
+                    <br />
+                    <h5 class="owned-img-title">Swaggy Tiger</h5>
+                    <button class="owned-stake-btn btn-s">Stake</button>
+                  </div>
+                </div>
+
+                <div class="owned-img-card-con">
+                  <div class="owned-img-card">
+                    <img class="owned-img" src="./images/nft2.png" alt="" />
+                    <br />
+                    <h5 class="owned-img-title">City Monkey</h5>
+                    <button class="owned-stake-btn btn-s">Stake</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- this is the staked  tab code -->
+
+            <div class="staked-outer-con outer-con">
+              <div class="staked-con">
+                <div class="staked-img-card-con">
+                  <!-- <div class="staked-img-card">
+                    <img class="staked-img" src="./images/nft1.png" alt="" />
+                    <br />
+                    <h5 class="staked-img-title">Swaggy Tiger</h5>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 0"></div>
+                      <span class="percentage-el">0%</span>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal pop-up -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <div class="modal-img-con">
+          <img src="./images/wallet1.png" alt="" />
+        </div>
+        <div class="modal-img-con">
+          <img src="./images/wallet2.png" alt="" />
+        </div>
+        <div class="modal-img-con">
+          <img src="./images/wallet3.png" alt="" />
+        </div>
+        <div class="modal-img-con">
+          <img src="./images/wallet4.png" alt="" />
+        </div>
+      </div>
+
+      <span class="close-btn" id="modal-close">&times</span>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </body>
+</html>
