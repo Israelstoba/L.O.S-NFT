@@ -64,10 +64,6 @@ const startDate = new Date('2023-02-25');
 const endDate = new Date('2023-02-29');
 const today = new Date();
 
-// for (let i = 0; i < stakedNftCard.length; i++) {
-//   stakedNftCard[i];
-// }
-
 var addToStakedBtn = document.getElementsByClassName('owned-stake-btn');
 
 for (var i = 0; i < addToStakedBtn.length; i++) {
