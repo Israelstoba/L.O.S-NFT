@@ -1,3 +1,4 @@
+//////////////////IMAGE SCROLLER SCRIPT ///////////////
 const mediaScroller = document.querySelector('.img-scroller');
 const rightBtn = document.querySelector('#scroll-indicator-right');
 const leftBtn = document.querySelector('#scroll-indicator-left');
@@ -9,7 +10,7 @@ leftBtn.addEventListener('click', function () {
   mediaScroller.scrollLeft -= 350;
 });
 
-//////////////////////////Code to display owned and staked tabs
+////////////////// OWNED & STAKED DISPLAY SCRIPT ///////////
 
 const ownedBtn = document.querySelector('.owned-btn');
 const stakedBtn = document.querySelector('.staked-btn');
@@ -35,7 +36,7 @@ ownedBtn.addEventListener('click', () => {
   stakedOuterCon.classList.remove('active-con');
 });
 
-////////////// script for the modal //////////////////////////////////
+////////////////////// MODAL POP-UP SCRIPT ////////////////////
 const modalOpen = document.querySelector('#modal-open');
 const modalClose = document.querySelector('#modal-close');
 const modal = document.querySelector('#modal');
@@ -56,20 +57,15 @@ modalBg.addEventListener('click', () => {
   modal.classList.remove('active');
 });
 
-////////////// script for the progress bar //////////////////////////////////
+////////////// PROGRESS BAR SCRIPT //////////////////////
 
-///////////// Set the start and end dates
+///////////// Set the start and end dates //////////
 const stakedNftCard = document.querySelectorAll('.staked-img-card');
 const startDate = new Date('2023-02-25');
 const endDate = new Date('2023-02-29');
 const today = new Date();
 
 var addToStakedBtn = document.getElementsByClassName('owned-stake-btn');
-
-for (var i = 0; i < addToStakedBtn.length; i++) {
-  var button = addToStakedBtn[i];
-  button.addEventListener('click', addToStakedBtnClicked);
-}
 
 function addToStakedBtnClicked(event) {
   var button = event.target;
