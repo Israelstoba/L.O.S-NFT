@@ -62,7 +62,7 @@ modalBg.addEventListener('click', () => {
 ///////////// Set the start and end dates //////////
 const stakedNftCard = document.querySelectorAll('.staked-img-card');
 const startDate = new Date('2023-02-25');
-const endDate = new Date('2023-02-29');
+const endDate = new Date('2023-0-15');
 const today = new Date();
 
 var addToStakedBtn = document.getElementsByClassName('owned-stake-btn');
