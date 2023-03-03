@@ -1,14 +1,19 @@
 ////////////////IMAGE SCROLLER SCRIPT ///////////////
-const mediaScroller = document.querySelector('.img-scroller');
-const rightBtn = document.querySelector('#scroll-indicator-right');
-const leftBtn = document.querySelector('#scroll-indicator-left');
+const images = document.querySelectorAll('.carousel__img');
+const indicators = document.querySelectorAll('.indicator');
+let currentImg = 0;
+let currentIndicator = 0;
 
-rightBtn.addEventListener('click', function () {
-  mediaScroller.scrollLeft += 350;
-});
-leftBtn.addEventListener('click', function () {
-  mediaScroller.scrollLeft -= 350;
-});
+function changeImage() {
+  images[currentImg].classList.remove('show-img');
+  currentImg = (currentImg + 1) % images.length;
+  images[currentImg].classList.add('show-img');
+
+  indicators[currentIndicator].classList.remove('show-indicator');
+  currentIndicator = (currentIndicator + 1) % indicators.length;
+  indicators[currentIndicator].classList.add('show-indicator');
+}
+setInterval(changeImage, 3000);
 
 ////////////////// OWNED & STAKED DISPLAY SCRIPT ///////////
 

@@ -98,97 +98,64 @@ img {
 .col-2-l {
   flex: 1;
   flex-basis: 48%;
-  padding: 2rem;
-  min-width: 250px;
-}
-.col-2-s {
-  flex: 1;
-  flex-basis: 48%;
   padding: 1rem;
-  max-width: 200px;
-  min-width: 120px;
+  min-width: 200px;
 }
 
 ///////// IMAGE SCROLLER SEGMENT ////////////
-///////// IMAGE SCROLLER SEGMENT ////////////
 
-.img-scroller-con {
-  position: relative;
-}
-
-.img-scroller {
-  width: 100%;
-  background-color: var(--clr-prim-dark);
-  padding: 2rem;
-  display: grid;
-  grid-auto-flow: column;
-  // grid-auto-columns: 80%;
-  // grid-auto-columns: 80%;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  .scroll-img {
-    padding: 1rem;
-    scroll-snap-align: start;
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    width: 600px;
-    max-width: 100%;
-    height: 350px;
-    max-height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .scroll-img1 {
-    background-image: url(../images/img01.png);
-  }
-  .scroll-img2 {
-    background-image: url(../images/img2.jpg);
-  }
-  .scroll-img3 {
-    background-image: url(../images/img3.jpg);
-  }
-  .scroll-img4 {
-    background-image: url(../images/img4.jpg);
-  }
-  .scroll-img5 {
-    background-image: url(../images/img5.png);
-  }
-  .scroll-img6 {
-    background-image: url(../images/img6.jpg);
-  }
-  .scroll-img7 {
-    background-image: url(../images/img7.jpg);
-  }
-}
-
-.scroll-indicator {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  font-size: 2rem;
-  border: none;
-  color: var(--clr-light);
+.carousel-con {
   background-color: var(--overlay-prim);
+  max-width: 100%;
+  min-width: 100px;
+  padding-bottom: 0.5rem;
+  margin: 0 auto;
+}
+
+.carousel {
+  width: 100%;
+  min-width: 100%;
+  max-height: 400px;
+  aspect-ratio: 16/9;
+  height: 100%;
+  min-height: 100px;
+
+  position: relative;
+
+  .carousel__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: 0;
+    transition: opacity 1s ease;
+  }
+}
+
+.carousel__img.show-img {
+  opacity: 1;
+}
+
+.indicator-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.7rem;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 20;
+  background-color: var(--overlay-prim);
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
-.scroll-indicator-left {
-  left: 2rem;
-}
-.scroll-indicator-right {
-  right: 2rem;
+
+.indicator.show-indicator {
+  background-color: var(--clr-prim-dark);
 }
 
 ///////////NFT SEGMENT STYLES /////////////////////
@@ -444,7 +411,6 @@ img {
 }
 
 /////////////// MOBILE RESPONSIVE STYLES ////////////////////
-/////////////// MOBILE RESPONSIVE STYLES ////////////////////
 
 @media only screen and (max-width: 768px) {
   .staked-img-card-con,
@@ -479,7 +445,13 @@ img {
   .scroll-indicator-right {
     right: 1rem;
   }
+
+  .indicator {
+    width: 7px;
+    height: 7px;
+  }
 }
+
 @media only screen and (max-width: 450px) {
   .img-scroller {
     .scroll-img {
