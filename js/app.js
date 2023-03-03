@@ -37,7 +37,6 @@ ownedBtn.addEventListener('click', () => {
 });
 
 ////////////////////// MODAL POP-UP SCRIPT ////////////////////
-////////////////////// MODAL POP-UP SCRIPT ////////////////////
 const modalOpen = document.querySelector('#modal-open');
 const modalClose = document.querySelector('#modal-close');
 const modal = document.querySelector('#modal');
@@ -59,9 +58,7 @@ modalBg.addEventListener('click', () => {
 });
 
 ////////////// PROGRESS BAR SCRIPT //////////////////////
-////////////// PROGRESS BAR SCRIPT //////////////////////
 
-///////////// Set the start and end dates //////////
 ///////////// Set the start and end dates //////////
 const stakedNftCard = document.querySelectorAll('.staked-img-card');
 const startDate = new Date('2023-02-25');
