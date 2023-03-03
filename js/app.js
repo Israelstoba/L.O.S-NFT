@@ -1,4 +1,4 @@
-//////////////////IMAGE SCROLLER SCRIPT ///////////////
+////////////////IMAGE SCROLLER SCRIPT ///////////////
 const mediaScroller = document.querySelector('.img-scroller');
 const rightBtn = document.querySelector('#scroll-indicator-right');
 const leftBtn = document.querySelector('#scroll-indicator-left');
@@ -66,6 +66,10 @@ const endDate = new Date('2023-0-15');
 const today = new Date();
 
 var addToStakedBtn = document.getElementsByClassName('owned-stake-btn');
+for (var i = 0; i < addToStakedBtn.length; i++) {
+  var button = addToStakedBtn[i];
+  button.addEventListener('click', addToStakedBtnClicked);
+}
 
 function addToStakedBtnClicked(event) {
   var button = event.target;
@@ -83,15 +87,15 @@ function addImageToStaked(title, imageScr) {
     'staked-img-card-con'
   )[0];
   var newImageCardContent = `
-  <div class="staked-img-card">
+  <div class="staked-img__img-con">
   <img class="staked-img" src="${imageScr}" alt="" />
+  </div>
   <br />
   <h5 class="staked-img-title">${title}</h5>
   <div class="progress-bar">
     <div class="progress" style="width: 0"></div>
     <span class="percentage-el">0%</span>
   </div>
-</div>
   `;
   newImageCard.innerHTML = newImageCardContent;
   stakedImageCard.append(newImageCard);

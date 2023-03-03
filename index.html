@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>League of Shogun</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" href="./images/logo.png" />
     <script defer src="./js/app.js"></script>
   </head>
   <body>
@@ -18,9 +19,10 @@
               <div class="scroll-img scroll-img1"></div>
               <div class="scroll-img scroll-img2"></div>
               <div class="scroll-img scroll-img3"></div>
-              <div class="scroll-img scroll-img1"></div>
-              <div class="scroll-img scroll-img2"></div>
-              <div class="scroll-img scroll-img3"></div>
+              <div class="scroll-img scroll-img4"></div>
+              <div class="scroll-img scroll-img5"></div>
+              <div class="scroll-img scroll-img6"></div>
+              <div class="scroll-img scroll-img7"></div>
 
               <!-- This are the image slider indicator buttons -->
               <button
@@ -45,62 +47,72 @@
             <div class="btn-wrapper">
               <button class="owned-btn btn">Owned</button>
               <button class="staked-btn btn">Staked</button>
-              <button class="connect-btn btn" id="modal-open">Connect</button>
             </div>
 
             <div class="owned-outer-con outer-con active-con">
               <div class="owned-con">
+                <!-- this is the owned image card container  -->
                 <div class="owned-img-card-con">
-                  <!-- this is the owned image card  -->
-
                   <div class="owned-img-card">
-                    <img class="owned-img" src="./images/nft1.png" alt="" />
+                    <div class="owned-img__img-con">
+                      <img class="owned-img" src="./images/nft01.png" alt="" />
+                    </div>
                     <br />
-                    <h5 class="owned-img-title">Swaggy Tiger</h5>
+                    <h5 class="owned-img-title">Hero</h5>
                     <button class="owned-stake-btn btn-s">Stake</button>
                   </div>
                 </div>
 
                 <div class="owned-img-card-con">
                   <div class="owned-img-card">
-                    <img class="owned-img" src="./images/nft2.png" alt="" />
+                    <div class="owned-img__img-con">
+                      <img class="owned-img" src="./images/nft02.png" alt="" />
+                    </div>
                     <br />
-                    <h5 class="owned-img-title">City Monkey</h5>
+                    <h5 class="owned-img-title">Sword Man</h5>
                     <button class="owned-stake-btn btn-s">Stake</button>
                   </div>
                 </div>
 
                 <div class="owned-img-card-con">
                   <div class="owned-img-card">
-                    <img class="owned-img" src="./images/nft3.jpeg" alt="" />
+                    <div class="owned-img__img-con">
+                      <img class="owned-img" src="./images/nft3.png" alt="" />
+                    </div>
                     <br />
-                    <h5 class="owned-img-title">Moody Monkey</h5>
+                    <h5 class="owned-img-title">Saff Man</h5>
                     <button class="owned-stake-btn btn-s">Stake</button>
                   </div>
                 </div>
                 <div class="owned-img-card-con">
                   <div class="owned-img-card">
-                    <img class="owned-img" src="./images/nft4.jpeg" alt="" />
+                    <div class="owned-img__img-con">
+                      <img class="owned-img" src="./images/nft4.jpg" alt="" />
+                    </div>
                     <br />
-                    <h5 class="owned-img-title">King Cat</h5>
-                    <button class="owned-stake-btn btn-s">Stake</button>
-                  </div>
-                </div>
-
-                <div class="owned-img-card-con">
-                  <div class="owned-img-card">
-                    <img class="owned-img" src="./images/nft1.png" alt="" />
-                    <br />
-                    <h5 class="owned-img-title">Swaggy Tiger</h5>
+                    <h5 class="owned-img-title">Shogun Fierce</h5>
                     <button class="owned-stake-btn btn-s">Stake</button>
                   </div>
                 </div>
 
                 <div class="owned-img-card-con">
                   <div class="owned-img-card">
-                    <img class="owned-img" src="./images/nft2.png" alt="" />
+                    <div class="owned-img__img-con">
+                      <img class="owned-img" src="./images/nft5.png" alt="" />
+                    </div>
                     <br />
-                    <h5 class="owned-img-title">City Monkey</h5>
+                    <h5 class="owned-img-title">Hatman</h5>
+                    <button class="owned-stake-btn btn-s">Stake</button>
+                  </div>
+                </div>
+
+                <div class="owned-img-card-con">
+                  <div class="owned-img-card">
+                    <div class="owned-img__img-con">
+                      <img class="owned-img" src="./images/nft6.png" alt="" />
+                    </div>
+                    <br />
+                    <h5 class="owned-img-title">Eastern hero</h5>
                     <button class="owned-stake-btn btn-s">Stake</button>
                   </div>
                 </div>
@@ -116,6 +128,9 @@
           </div>
         </div>
       </div>
+
+      <!-- Connect button -->
+      <button class="connect-btn btn" id="modal-open">Connect</button>
     </div>
     <!-- This is the modal pop-up -->
     <div class="modal" id="modal">
