@@ -1,11 +1,7 @@
 //////////IMPORTED GOOGLE FONT///////////
-//////////IMPORTED GOOGLE FONT///////////
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
 
 /////////// DECLARED UTILITY VARIABLES /////////////////
-
-/////////// DECLARED UTILITY VARIABLES /////////////////
-
 :root {
   --clr-light: #fff;
   --clr-dark: #000;
@@ -43,7 +39,6 @@ body {
   position: relative;
 }
 
-///////// GENERAL BUTTONS /////////////
 ///////// GENERAL BUTTONS /////////////
 .btn {
   background-color: var(--clr-prim);
@@ -85,7 +80,6 @@ img {
   border-radius: var(--br-10);
 }
 
-////////// ROES AND COLUMNS ////////////
 ////////// ROES AND COLUMNS ////////////
 .row-con {
   display: flex;
@@ -161,9 +155,6 @@ img {
 ///////////NFT SEGMENT STYLES /////////////////////
 
 ///////// Owned / Staked button container style ////////////
-///////////NFT SEGMENT STYLES /////////////////////
-
-///////// Owned / Staked button container style ////////////
 .btn-wrapper {
   width: 100%;
   display: flex;
@@ -175,7 +166,6 @@ img {
   position: relative;
 }
 
-//////////////// nft container styles //////////////////
 //////////////// nft container styles //////////////////
 .nft-con {
   width: 100%;
@@ -279,9 +269,6 @@ img {
     padding: var(--pd-2);
   }
 }
-
-/////////PROGRESS BAR STYLES /////////////
-
 /////////PROGRESS BAR STYLES /////////////
 
 .progress-bar {
@@ -315,14 +302,13 @@ img {
 
 .connect-btn {
   position: absolute;
-  padding: var(--pd-btn-s);
+  padding: var(--pd-btn-l);
   border-radius: var(--br-5);
   top: 2rem;
   right: 2rem;
   background-color: var(--clr-acsent);
 }
 
-////////////////// CONNECT WALLET MODAL STYLES /////////////////////
 ////////////////// CONNECT WALLET MODAL STYLES /////////////////////
 .modal {
   width: 400px;
@@ -336,7 +322,6 @@ img {
   padding: 6rem 3rem 3rem;
   transform: translate(-50%, -50%) scale(0);
   background-color: var(--clr-prim-dark);
-  transition: all 0.6s ease;
   transition: all 0.6s ease;
 
   .modal-content {
@@ -357,11 +342,9 @@ img {
       box-shadow: 3px 3px 10px rgba(255, 198, 246, 0.5);
       border-radius: var(--br-10);
       padding: var(--pd-1);
-      padding: var(--pd-1);
       transition: all 0.6s ease;
 
       img {
-        width: 100%;
         width: 100%;
       }
 
@@ -390,7 +373,9 @@ img {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.overlay {
+/////////////////// CUSTOM OVERLAY BACKGROUND ////////////////
+
+.custom-overlay {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -405,9 +390,48 @@ img {
   transition: all 0.6s ease;
 }
 
-.overlay.active {
+.overlay.active,
+.alert-overlay.show-alert-overlay {
   opacity: 1;
   pointer-events: all;
+}
+
+/////////////// ALERT MESSAGE STYLE ////////////////////
+.alert-msg-box {
+  min-height: 100px;
+  padding: var(--pd-1);
+  border-radius: var(--br-10);
+  background-color: var(--clr-acsent);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: 60;
+  pointer-events: none;
+  transition: all 0.6s ease;
+
+  .alert-msg {
+    margin: 3rem 0 1rem;
+  }
+
+  .close-alert {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: var(--br-5);
+    background-color: var(--clr-prim-dark);
+    color: var(--clr-acsent);
+    cursor: pointer;
+  }
+}
+
+.alert-msg-box.show-alert-box {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 /////////////// MOBILE RESPONSIVE STYLES ////////////////////

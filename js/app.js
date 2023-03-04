@@ -22,16 +22,6 @@ const stakedBtn = document.querySelector('.staked-btn');
 const ownedOuterCon = document.querySelector('.owned-outer-con');
 const stakedOuterCon = document.querySelector('.staked-outer-con');
 
-// ownedBtn.addEventListener('click', () => {
-//   stakedOuterCon.style.display = 'none';
-//   ownedOuterCon.style.display = 'block';
-// });
-
-// stakedBtn.addEventListener('click', () => {
-//   ownedOuterCon.style.display = 'none';
-//   stakedOuterCon.style.display = 'block';
-// });
-
 stakedBtn.addEventListener('click', () => {
   ownedOuterCon.classList.remove('active-con');
   stakedOuterCon.classList.add('active-con');
@@ -91,6 +81,32 @@ function addImageToStaked(title, imageScr) {
   var stakedImageCard = document.getElementsByClassName(
     'staked-img-card-con'
   )[0];
+
+  ///// To avoid addd more than one same Nft to the staked tab
+  var alertBox = document.querySelector('.alert-msg-box');
+  var alertBg = document.querySelector('.alert-overlay');
+  var closeAlertBox = document.querySelector('.close-alert');
+  var stakedImageTitle =
+    stakedImageCard.getElementsByClassName('staked-img-title');
+  for (var i = 0; i < stakedImageTitle.length; i++)
+    if (stakedImageTitle[i].innerText == title) {
+      // alert('this item is added to the staked tab already');
+      alertBg.classList.add('show-alert-overlay');
+      alertBox.classList.add('show-alert-box');
+
+      closeAlertBox.addEventListener('click', () => {
+        alertBg.classList.remove('show-alert-overlay');
+        alertBox.classList.remove('show-alert-box');
+      });
+
+      alertBg.addEventListener('click', () => {
+        alertBg.classList.remove('show-alert-overlay');
+        alertBox.classList.remove('show-alert-box');
+      });
+
+      return;
+    }
+
   var newImageCardContent = `
   <div class="staked-img__img-con">
   <img class="staked-img" src="${imageScr}" alt="" />
