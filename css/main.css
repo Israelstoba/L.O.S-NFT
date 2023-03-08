@@ -142,15 +142,34 @@ img {
   background-color: var(--clr-prim-dark);
 }
 
-.btn-wrapper {
+.tab-wrapper {
   width: 100%;
+  height: 80px;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 3rem;
-  padding-top: 5rem;
-  padding-bottom: var(--pd-2);
+  align-items: center;
   background-color: var(--clr-prim-dark);
   position: relative;
+  overflow-y: hidden;
+}
+
+.tab-bg {
+  width: 50%;
+  height: 100%;
+  display: block;
+  background-color: var(--clr-prim);
+  position: absolute;
+  right: 50%;
+  transition: all 0.5s ease;
+}
+
+.tabs {
+  z-index: 20;
+  width: 100%;
+  color: var(--clr-light);
+  padding: 2rem 0;
+  text-align: center;
+  cursor: pointer;
 }
 
 .nft-con {
@@ -200,7 +219,6 @@ img {
   height: 300px;
   overflow-y: auto;
   border-top: 2px solid var(--overlay-prim);
-  border-top: 2px solid var(--overlay-prim);
 }
 .owned-con::-webkit-scrollbar,
 .staked-con::-webkit-scrollbar {
@@ -234,7 +252,7 @@ img {
 }
 
 .staked-outer-con {
-  background-color: var(--overlay-prim);
+  background-color: var(--overlay-dark);
 }
 
 .staked-con .staked-img-card-con {

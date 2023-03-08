@@ -17,18 +17,21 @@ setInterval(changeImage, 3000);
 
 ////////////////// OWNED & STAKED DISPLAY SCRIPT ///////////
 
-const ownedBtn = document.querySelector('.owned-btn');
-const stakedBtn = document.querySelector('.staked-btn');
+const ownedBtn = document.querySelector('.owned-tab');
+const stakedBtn = document.querySelector('.staked-tab');
 const ownedOuterCon = document.querySelector('.owned-outer-con');
 const stakedOuterCon = document.querySelector('.staked-outer-con');
+const tabBg = document.querySelector('.tab-bg');
 
 stakedBtn.addEventListener('click', () => {
   ownedOuterCon.classList.remove('active-con');
   stakedOuterCon.classList.add('active-con');
+  tabBg.style.right = '0';
 });
 ownedBtn.addEventListener('click', () => {
   ownedOuterCon.classList.add('active-con');
   stakedOuterCon.classList.remove('active-con');
+  tabBg.style.right = '50%';
 });
 
 ////////////////////// MODAL POP-UP SCRIPT ////////////////////
@@ -57,7 +60,7 @@ modalBg.addEventListener('click', () => {
 ///////////// Set the start and end dates //////////
 const stakedNftCard = document.querySelectorAll('.staked-img-card');
 const startDate = new Date('2023-02-25');
-const endDate = new Date('2023-0-15');
+const endDate = new Date('2023-07-15');
 const today = new Date();
 
 var addToStakedBtn = document.getElementsByClassName('owned-stake-btn');
@@ -90,7 +93,6 @@ function addImageToStaked(title, imageScr) {
     stakedImageCard.getElementsByClassName('staked-img-title');
   for (var i = 0; i < stakedImageTitle.length; i++)
     if (stakedImageTitle[i].innerText == title) {
-      // alert('this item is added to the staked tab already');
       alertBg.classList.add('show-alert-overlay');
       alertBox.classList.add('show-alert-box');
 
@@ -143,7 +145,7 @@ setInterval(() => {
   progressBar.style.width = percentageCalc + '%';
   percentageEl.textContent = percentageCalc + '%';
 
-  if (percentageCalc >= 100) {
+  if (percentageCalc == 100) {
     clearInterval(interval);
     percentageEl.textContent = '100' + '%';
   }
