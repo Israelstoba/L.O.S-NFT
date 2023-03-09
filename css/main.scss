@@ -238,7 +238,6 @@ img {
 .staked-con {
   width: 100%;
   height: 300px;
-
   overflow-y: auto;
   border-top: 2px solid var(--overlay-prim);
 
@@ -285,13 +284,38 @@ img {
     place-items: center;
     gap: 2rem;
     width: 100%;
+    height: 100%;
     padding: var(--pd-2);
   }
 }
+
+.stacked-inner-con {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  // flex-wrap: wrap;
+}
+
+/////////////UNSTAKE BUTTON STYLES ///////////////
+.unstake-btn {
+  width: 30px;
+  height: 12px;
+  background-color: var(--clr-light);
+  color: var(--clr-acsent);
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: grid;
+  place-content: center;
+  padding: 0.5rem 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
 /////////PROGRESS BAR STYLES /////////////
 
 .progress-bar {
-  width: 100px;
+  width: 80px;
   height: 12px;
   padding: 0.5rem 0;
   background-color: var(--clr-prim-dark);

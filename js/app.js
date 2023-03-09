@@ -55,19 +55,7 @@ modalBg.addEventListener('click', () => {
   modal.classList.remove('active');
 });
 
-////////////// PROGRESS BAR SCRIPT //////////////////////
-
-///////////// Set the start and end dates //////////
-const stakedNftCard = document.querySelectorAll('.staked-img-card');
-const startDate = new Date('2023-02-25');
-const endDate = new Date('2023-07-15');
-const today = new Date();
-
-var addToStakedBtn = document.getElementsByClassName('owned-stake-btn');
-for (var i = 0; i < addToStakedBtn.length; i++) {
-  var button = addToStakedBtn[i];
-  button.addEventListener('click', addToStakedBtnClicked);
-}
+/////////////////// SCRIPT TO ADD NFT TO STAKED TAB /////////////////
 
 function addToStakedBtnClicked(event) {
   var button = event.target;
@@ -109,19 +97,52 @@ function addImageToStaked(title, imageScr) {
       return;
     }
 
+  //////////// SCRIPT TO REMOVE NFT FROM STAKED TAB /////////////////
+
+  function unstakeNft() {
+    var removeFromStaked = document.getElementsByClassName('unstake-btn');
+    for (var i = 0; i < removeFromStaked.length; i++) {
+      var unstakeBtn = removeFromStaked[i];
+      unstakeBtn.addEventListener('click', (event) => {
+        var unstakeBtnClicked = event.target;
+        unstakeBtnClicked.parentElement.parentElement.remove();
+      });
+    }
+  }
+
   var newImageCardContent = `
   <div class="staked-img__img-con">
   <img class="staked-img" src="${imageScr}" alt="" />
   </div>
   <br />
   <h5 class="staked-img-title">${title}</h5>
+  <div class="stacked-inner-con">
   <div class="progress-bar">
     <div class="progress" style="width: 0"></div>
     <span class="percentage-el">0%</span>
   </div>
+  <div class="unstake-btn">&times</div>
+  </div>
   `;
   newImageCard.innerHTML = newImageCardContent;
   stakedImageCard.append(newImageCard);
+  newImageCard
+    .getElementsByClassName('unstake-btn')[0]
+    .addEventListener('click', unstakeNft());
+}
+
+////////////// PROGRESS BAR SCRIPT //////////////////////
+
+///////////// Set the start and end dates //////////
+const stakedNftCard = document.querySelectorAll('.staked-img-card');
+const startDate = new Date('2023-02-25');
+const endDate = new Date('2023-07-15');
+const today = new Date();
+
+var addToStakedBtn = document.getElementsByClassName('owned-stake-btn');
+for (var i = 0; i < addToStakedBtn.length; i++) {
+  var button = addToStakedBtn[i];
+  button.addEventListener('click', addToStakedBtnClicked);
 }
 
 ///////////// Get the progress bar & percentage elements
