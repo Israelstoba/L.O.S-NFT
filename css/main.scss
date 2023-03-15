@@ -104,6 +104,7 @@ img {
   min-width: 100px;
   padding-bottom: 0.5rem;
   margin: 0 auto;
+  position: relative;
 }
 
 .carousel {
@@ -130,26 +131,6 @@ img {
 
 .carousel__img.show-img {
   opacity: 1;
-}
-
-.indicator-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 0.7rem;
-}
-
-.indicator {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--overlay-prim);
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.indicator.show-indicator {
-  background-color: var(--clr-prim-dark);
 }
 
 ///////////NFT SEGMENT STYLES /////////////////////
@@ -500,7 +481,6 @@ img {
     }
   }
   .scroll-indicator {
-    position: absolute;
     width: 35px;
     height: 35px;
     font-size: 1rem;
@@ -527,5 +507,10 @@ img {
       height: 150px;
       max-height: 100%;
     }
+  }
+
+  .scroll-indicator {
+    width: 25px;
+    height: 25px;
   }
 }
